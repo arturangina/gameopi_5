@@ -2,7 +2,46 @@
 #include <windows.h>
 using namespace std;
 
+void quit() {
+    std::exit(0);
+}
 
+void quit_menu() {
+    system("cls");
+    int kod;
+    cout << "     .---." << endl;
+    cout << "     |~_~|" << endl;
+    cout << "     |   |" << endl;
+    cout << "    //   \\\\" << endl;
+    cout << "   (|     |)" << endl;
+    cout << "  /'\\_   _/`\\" << endl;
+    cout << "  \\___)=(___/" << endl;
+    cout << "      | |" << endl;
+    cout << "     / | \\" << endl;
+    cout << "    /  |  \\" << endl;
+    cout << "   |   |   |" << endl;
+    cout << "   |   |   |" << endl;
+    cout << "   \\__/ \\__/" << endl;
+    cout << endl;
+    cout << endl;
+    cout << "                        Вы уверены что хотите выйти из игры? При следующем запуске все придётся начать сначала." << endl;
+    cout << "                                             0 - вернуться в игру         1 - выйти из игры";
+    cout << endl;
+    cin >> kod;
+    switch (kod) {
+    case(1):
+    {
+        quit();
+        break;
+    }
+    case(0):
+    {
+        break;
+    }
+    default:
+        quit_menu();
+    }
+}
 
 int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy);
 void death(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
@@ -54,6 +93,7 @@ int studyerror = 0;
 int vtoroedihanie = 0;
 int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
     int a;
+    int refquit = 0;
     cleanmenu();
     if (moneyerror == 1) {
         cout << "НЕТУ ДЕНЕГ - СОСЕШЬ ЛАПУ!!" << endl;
@@ -88,6 +128,7 @@ int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
     cout << "                               4)пойти в мак  (250руб. +48% к еде) 4)поспать девять часов    3)отрываться не по детски" << endl;
     cout << "                               5)еда ресторана(400руб. +80% к еде) " << endl << endl<<"111 - сделать лабу (+1 к учебе но от всех параметров отнимается 30)" << endl << endl;
     cout << "купить второе дыхание - 700руб. (вы не умираете если один из показателей опустится до нуля, для покупки ввести 123)" << endl;
+    cout << "555 - выйти из игры(текущий студент погибнет)" << endl;
     cout << "================================================================================================" << endl<<endl;
     cout << "для выбора конкретного действия напишите категорию и пункт слитно | например ввод 11 это раздавать листовки итд | " << endl;
     moneyerror = 0;
@@ -253,10 +294,17 @@ int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
         refmoney -= 700;
         break;
     }
+    case(555):
+        refquit = 1;
     default:
     {
-
-        return menu(refmoney, refeda, refson, refmood, refstudy);
+        if (refquit == 0) {
+            return menu(refmoney, refeda, refson, refmood, refstudy);
+        }
+        else if (refquit == 1) {
+            quit_menu();
+            return menu(refmoney, refeda, refson, refmood, refstudy);
+        }
     }
 
     }
@@ -325,6 +373,7 @@ int main() {
     int& refson = Son;
     int& refmood = Mood;
     int& refstudy = Study;
+    int refquit = 0;
     menu(Money, Eda, Son, Mood, Study);
     if (menu) {
         system("cls");
