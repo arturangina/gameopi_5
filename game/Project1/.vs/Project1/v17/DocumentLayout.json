@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\Desktop\\opiigra\\game\\Project1\\",
+  "WorkspaceRootPath": "C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59D2B15B-3726-4CB6-93D0-D6D43901A461}|Project1.vcxproj|C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\Desktop\\opiigra\\game\\Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{59D2B15B-3726-4CB6-93D0-D6D43901A461}|Project1.vcxproj|C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\krestikinoliki.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{59D2B15B-3726-4CB6-93D0-D6D43901A461}|Project1.vcxproj|solutionrelative:krestikinoliki.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59D2B15B-3726-4CB6-93D0-D6D43901A461}|Project1.vcxproj|C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{59D2B15B-3726-4CB6-93D0-D6D43901A461}|Project1.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "krestikinoliki.cpp",
+              "DocumentMoniker": "C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\krestikinoliki.cpp",
+              "RelativeDocumentMoniker": "krestikinoliki.cpp",
+              "ToolTip": "C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\krestikinoliki.cpp",
+              "RelativeToolTip": "krestikinoliki.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-22T22:42:30.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\Desktop\\opiigra\\game\\Project1\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0443\u0440\\Desktop\\opiigra\\game\\Project1\\main.cpp",
+              "ToolTip": "C:\\Users\\dimah\\Desktop\\opipro\\gameopi_5\\game\\Project1\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAswDUBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-04T13:39:37.99Z",
               "EditorCaption": ""
