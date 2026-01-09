@@ -41,6 +41,47 @@ void death(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy)
     exit(0);
 }
 
+void quit() {
+    std::exit(0);
+}
+
+void quit_menu() {
+    system("cls");
+    int kod;
+    cout << "     .---." << endl;
+    cout << "     |~_~|" << endl;
+    cout << "     |   |" << endl;
+    cout << "    //   \\\\" << endl;
+    cout << "   (|     |)" << endl;
+    cout << "  /'\\_   _/`\\" << endl;
+    cout << "  \\___)=(___/" << endl;
+    cout << "      | |" << endl;
+    cout << "     / | \\" << endl;
+    cout << "    /  |  \\" << endl;
+    cout << "   |   |   |" << endl;
+    cout << "   |   |   |" << endl;
+    cout << "   \\__/ \\__/" << endl;
+    cout << endl;
+    cout << endl;
+    cout << "                        Вы уверены что хотите выйти из игры? При следующем запуске все придётся начать сначала." << endl;
+    cout << "                                             0 - вернуться в игру         1 - выйти из игры";
+    cout << endl;
+    cin >> kod;
+    switch (kod) {
+    case(1):
+    {
+        quit();
+        break;
+    }
+    case(0):
+    {
+        break;
+    }
+    default:
+        quit_menu();
+    }
+}
+
 void cleanmenu() { system("cls"); }
 
 int moneyerror = 0;
@@ -57,7 +98,7 @@ int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
         cout << "ты воспользовался вторым дыханием и остался жив, хотя должен был умереть. впредь будь осторожнее!" << endl << endl;
         vtoroedihanie = 0;
     }
-
+    
     cout << "Цель игры: заполнить шкалу учебы до ста процентов! (ну или хотя бы выжить в первом семестре бгту - 15 процентов учебы...)" << endl;
     cout << "================================================================================================" << endl << "вы:" << endl;
     cout << " .....---." << endl;
@@ -81,6 +122,7 @@ int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
     cout << "                               4)пойти в мак  (250руб. +48% к еде) 4)поспать девять часов    3)отрываться не по детски" << endl;
     cout << "                               5)еда ресторана(400руб. +80% к еде) " << endl << endl << "111 - сделать лабу (+1 к учебе но от всех параметров отнимается 30)" << endl << endl;
     cout << "купить второе дыхание - 700руб. (вы не умираете если один из показателей опустится до нуля, для покупки ввести 123)" << endl;
+    cout << "555 - выход" << endl;
     cout << "================================================================================================" << endl << endl;
     cout << "для выбора конкретного действия напишите категорию и пункт слитно | например ввод 11 это раздавать листовки итд | " << endl;
 
@@ -124,6 +166,10 @@ int menu(int& refmoney, int& refeda, int& refson, int& refmood, int& refstudy) {
         if (ge == 0) { refmoney += 200; }      // победа ноликов — награда
         else if (ge == 1) { refmood -= 20; }   // победа крестиков — штраф
         break;
+    }
+
+    case 555: {
+        quit_menu();
     }
 
     default: {
